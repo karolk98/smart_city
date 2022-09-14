@@ -28,10 +28,6 @@ import moa.classifiers.MultiClassClassifier;
 
 
 
-/**
- * @author DuHonghui
- *
- */
 public class Melanie extends AbstractClassifier implements MultiClassClassifier{
 
 	private static final long serialVersionUID = 1L;

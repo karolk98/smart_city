@@ -65,7 +65,7 @@ import java.util.List;
  * @author Jan N. van Rijn (j.n.van.rijn@liacs.leidenuniv.nl)
  * @version $Revision: 1 $
  */
-public abstract class BlastAbstract2 extends AbstractClassifier implements MultiClassClassifier {
+public abstract class TransBlastAbstract extends AbstractClassifier implements MultiClassClassifier {
 
     private static final long serialVersionUID = 1L;
 
@@ -79,16 +79,6 @@ public abstract class BlastAbstract2 extends AbstractClassifier implements Multi
                     new ClassOption("", ' ', "", Classifier.class, "meta.Melanie2 -b meta.StreamingRandomPatches -f output.txt"),
                     new ClassOption("", ' ', "", Classifier.class, "meta.Smelanie"),
                     new ClassOption("", ' ', "", Classifier.class, "meta.Smelanie2"),
-//                  new ClassOption("", ' ', "", Classifier.class, "marline.MSBC -l meta.StreamingRandomPatches")
-//					new ClassOption("", ' ', "", Classifier.class,
-//					new ClassOption("", ' ', "", Classifier.class,
-//					new ClassOption("", ' ', "", Classifier.class, "bayes.NaiveBayes"),
-//					new ClassOption("", ' ', "", Classifier.class,
-//							"functions.Perceptron"),
-//					new ClassOption("", ' ', "", Classifier.class, "functions.SGD"),
-//					new ClassOption("", ' ', "", Classifier.class, "lazy.kNN"),
-//					new ClassOption("", ' ', "", Classifier.class,
-//							"trees.HoeffdingTree")
             },
             ',');
 
