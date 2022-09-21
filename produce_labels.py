@@ -3,7 +3,6 @@ import pandas as pd
 import statistics as stats
 from datetime import timedelta as td
 
-import arff
 
 COLNAMES = ['versionID','line','brigade','time','lon','lat','rawLow','rawLat','status','delay','delayAtStop','plannedLeaveTime','nearestStop',
 'nearestStopDistance','nearestStopLon','nearestStopLat','previousStop','previousStopLon','previousStopLat','previousStopDistance','previousStopArrivalTime',
@@ -11,13 +10,10 @@ COLNAMES = ['versionID','line','brigade','time','lon','lat','rawLow','rawLat','s
 'courseDirection','timetableIdentifier','timetableStatus','receivedTime','processingFinishedTime','onWayToDepot','overlapsWithNextBrigade','overlapsWithNextBrigadeStopLineBrigade',
 'atStop','speed','oldDelay','serverId','delayAtStopStopSequence','previousStopStopSequence','nextStopStopSequence','delayAtStopStopId','previousStopStopId','nextStopStopId',
 'courseDirectionStopStopId']
-# COLS_FOR_ARFF = ['domain','line','brigade','time','lon','lat','status','nearestStopLon','nearestStopLat','nextStopDistance','speed','delay']
-# COLS_FOR_ARFF = ['domain','time','lon','lat','nearestStopLon','nearestStopLat','nextStopDistance','speed','delay']
+
 COLS_FOR_ARFF = ['domain','time','lon','lat','nearestStopLon','nearestStopLat','nextStopDistance','speed','delay']
 buses = pd.read_csv('buses/2018-09-05/part-r-00000', sep=';', header=None, names=COLNAMES)
-# trams = pd.read_csv('trams/2018-09-07/part-r-00000', sep=';', header=None, names=COLNAMES)
-# buses['domain'] = 1
-# trams['domain'] = 0
+
 day = buses
 day['time'] = pd.to_datetime(day['time'], format='%Y-%m-%d %H:%M:%S')
 
