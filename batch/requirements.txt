@@ -1,0 +1,6 @@
+praat-parselmouth
+torch
+numpy
+scipy
+pandas
+sklearn
